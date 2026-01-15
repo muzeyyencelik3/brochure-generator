@@ -1,38 +1,100 @@
-# brochure-generator
-A tool that generates company brochures by analyzing landing pages using GPT or Ollama.
+Company Brochure Generator
 
-Broşür Oluşturucu (Company Brochure Generator)
+Company Brochure Generator, bir şirketin web sitesi açılış (landing) sayfasını analiz ederek; potansiyel müşteriler, yatırımcılar ve işe alım adayları için kısa, anlaşılır ve profesyonel bir şirket broşürü oluşturan yapay zekâ tabanlı bir uygulamadır.
 
-Bu proje, bir şirketin web sitesi açılış sayfasını analiz eden ve potansiyel müşteriler, yatırımcılar veya işe alım adayları için kısa bir broşür oluşturan bir araçtır.
+Bu proje hem bulut tabanlı büyük dil modelleri (GPT) hem de yerel modeller (Ollama) ile çalışacak şekilde tasarlanmıştır ve canlı (streaming) çıktı üretir.
 
-Modeller:
+Özellikler
 
-Ollama (llama3.2:latest) → Lokal, ücretsiz
+Şirket web sitesi (URL) analizi
 
-OpenAI GPT (gpt-4.1-mini) → Bulut, API anahtarı gerekir, ücretli
+Markdown formatında broşür üretimi
 
-Özellikler:
+Model seçimi (GPT / Ollama)
 
-Web sayfası içeriğini otomatik çekip analiz eder
+Canlı cevap üretimi (streaming)
 
-Markdown formatında, kod blokları olmadan broşür üretir
+Gradio tabanlı kullanıcı arayüzü
 
-Streaming yanıt ile uzun metinler anlık gösterilir
+Kullanıcı adı / şifre ile erişim (opsiyonel)
 
-Basit Gradio arayüzü ile kullanıcı dostu kullanım
+Deneysel ve genişletilebilir mimari
 
-Kurulum:
+Nasıl Çalışır?
 
-Python ortamı oluşturun (venv)
+Kullanıcı:
 
-pip install -r requirements.txt ile bağımlılıkları yükleyin
+Şirket adını girer
 
-view.launch(inbrowser=True) ile arayüzü başlatın
+Açılış sayfası URL’sini girer
 
-Kullanım örnekleri:
+Kullanılacak LLM modelini seçer
 
-Hugging Face → https://huggingface.co (GPT)
+Uygulama:
 
-OpenAI → https://openai.com (Ollama)
+Web sayfası içeriğini alır
 
-Lokal kullanım için Ollama ücretsiz, GPT kullanımı için OpenAI API key gereklidir.
+İçeriği analiz eder
+
+Hedef kitleye uygun bir şirket broşürü oluşturur
+
+Çıktı:
+
+Canlı olarak ekranda görüntülenir
+
+Okunabilir ve profesyonel bir formatta sunulur
+
+Kullanılan Teknolojiler
+
+Python
+
+Gradio (arayüz ve streaming)
+
+OpenAI API (GPT-4.1-mini)
+
+Ollama (llama3.2:latest)
+
+Generator ve yield tabanlı streaming mimarisi
+
+Arayüz
+
+Tek bir arayüz üzerinden:
+
+Mesaj girişi
+
+Model seçimi
+
+Canlı sonuç görüntüleme
+
+Demo amaçlı örnek girdiler kullanıcıya hazır olarak sunulmaktadır.
+
+Güvenlik Notu
+
+Projede Gradio’nun yerleşik kimlik doğrulama (authentication) mekanizması desteklenmektedir.
+Demo ve local kullanım için uygundur.
+Production ortamlar için ortam değişkenleri (.env) kullanılması önerilir.
+
+Kullanım Alanları
+
+Startup ve şirket tanıtımları
+
+Yatırımcı sunumları
+
+Hızlı şirket özetleri
+
+MVP / POC çalışmaları
+
+Yapay zekâ destekli içerik üretimi
+
+Notlar
+
+Proje deneysel bir Ar-Ge yaklaşımıyla geliştirilmiştir.
+
+Kod yapısı yeni modeller eklemeye uygundur.
+
+Eğitim, demo ve prototipleme amaçları için idealdir.
+
+Katkı ve Geri Bildirim
+
+Katkılara ve geri bildirimlere açıktır.
+Pull request veya issue açabilirsiniz.
